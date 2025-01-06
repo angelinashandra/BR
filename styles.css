@@ -1104,3 +1104,15 @@ ul {
   height: 100%;
   border: 0;
 }
+
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .iframe-container {
+    padding-bottom: 150%; /* Add more padding for narrower screens */
+  }
+}
+
