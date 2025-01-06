@@ -1122,5 +1122,34 @@ ul {
     margin: 0;
   }
 }
+/* Ensure both videos are aligned horizontally and are responsive */
+.video-container {
+  display: flex; /* Align videos side-by-side */
+  justify-content: center; /* Center the videos horizontally */
+  gap: 20px; /* Add space between videos */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.video-container iframe {
+  width: 100%; /* Make the iframe responsive */
+  max-width: 480px; /* Set a max width for better control */
+  aspect-ratio: 16 / 9; /* Maintain the aspect ratio */
+  border: none; /* Remove borders */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visuals */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column; /* Stack videos vertically */
+    align-items: center; /* Center them */
+  }
+
+  .video-container iframe {
+    max-width: 90%; /* Reduce size to fit smaller screens */
+  }
+}
 
 
