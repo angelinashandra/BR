@@ -1122,33 +1122,31 @@ ul {
     margin: 0;
   }
 }
-/* Ensure both videos are aligned horizontally and are responsive */
+/* Ensure both videos are aligned horizontally */
 .video-container {
-  display: flex; /* Align videos side-by-side */
-  justify-content: center; /* Center the videos horizontally */
-  gap: 20px; /* Add space between videos */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  margin: 20px 0; /* Add margin for spacing */
+  display: flex;
+  gap: 20px; /* Adds space between the two videos */
+  justify-content: center; /* Centers the videos horizontally */
+  margin: 20px 0; /* Optional: Add some spacing around the video container */
 }
 
+/* Make sure the video players scale responsively while maintaining aspect ratio */
 .video-container iframe {
-  width: 100%; /* Make the iframe responsive */
-  max-width: 480px; /* Set a max width for better control */
-  aspect-ratio: 16 / 9; /* Maintain the aspect ratio */
-  border: none; /* Remove borders */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visuals */
+  width: 100%;
+  height: auto;
+  max-width: 480px; /* Optional: Set a max width to prevent videos from becoming too large */
+  aspect-ratio: 16 / 9; /* Maintains 16:9 aspect ratio */
 }
 
-/* Adjustments for smaller screens */
+/* Optional: Add responsiveness for smaller screens */
 @media (max-width: 768px) {
   .video-container {
-    flex-direction: column; /* Stack videos vertically */
-    align-items: center; /* Center them */
+    flex-direction: column; /* Stack the videos vertically on small screens */
+    align-items: center; /* Center the videos */
   }
 
   .video-container iframe {
-    max-width: 90%; /* Reduce size to fit smaller screens */
+    max-width: 100%; /* Allow videos to use full width on smaller screens */
   }
 }
 
