@@ -1087,32 +1087,40 @@ ul {
   #delivery li {
     font-size: 1.1em; /* Smaller text size on mobile */
   }
-}
-.iframe-container {
+
+  .iframe-container {
   position: relative;
-  width: 100%;
-  padding-bottom: 130%; /* Adjust based on the form's aspect ratio (831 / 640 ≈ 1.3) */
-  height: 0;
-  overflow: hidden;
+  width: 100%; /* Ensures the container spans the full width */
+  padding-bottom: 130%; /* Default aspect ratio for desktop */
+  height: 0; /* Allows aspect-ratio-based scaling */
+  overflow: hidden; /* Hides anything outside the container */
+  margin: 0; /* Removes any default margins */
 }
 
 .iframe-container iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+  width: 100%; /* Makes the iframe span the entire container */
+  height: 100%; /* Matches the container's height */
+  border: 0; /* Removes any border */
 }
 
 @media (max-width: 768px) {
   #contact h2 {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Adjust spacing below the heading */
   }
 
   .iframe-container {
-    padding-bottom: 150%; /* Add more padding for narrower screens */
+    padding-bottom: 150%; /* Adjust aspect ratio for smaller screens */
+  }
+
+  /* Optional: Remove extra padding/margin for the #contact section on mobile */
+  #contact {
+    padding: 0;
+    margin: 0;
   }
 }
+
 
