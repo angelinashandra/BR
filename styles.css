@@ -1088,3 +1088,18 @@ ul {
     font-size: 1.1em; /* Smaller text size on mobile */
   }
 }
+@media (max-width: 768px) {
+  .header-content {
+    display: flex;
+    flex-wrap: wrap; /* Ensures all elements fit on smaller screens */
+  }
+}
+.header-counter {
+  position: relative;
+  z-index: 10;
+}
+.header-counter {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
